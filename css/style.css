@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------------------------------------------------------------------- */
+/* /CSS RESET */
+html {
+	background-color: #17BEBB;
+	font-family: 'Poppins', sans-serif;
+}
+h1 {
+	font-size: 2rem
+}
+
+h2 {
+	font-size: 1.6818rem;
+	color: #0f7876;
+}
+
+:root {
+  --main-border-color: 1px solid #333; 
+}
+.skip-link {
+    position: fixed;
+    top: -200px;
+}
+.skip-link:focus {
+    top: 0; /* Now the link will appear */
+}
+#content:target {
+  animation: highlight 0.75s ease-out;
+}
+@keyframes highlight {
+  from {
+    background: yellow;
+  }
+  
+  to {
+    background: #f2f2f2;
+  }
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 100vh;
+  	align-items: center;
+  	justify-items: center;
+
+}
+.mainGrid {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	width: 65%;
+	height: 80%;
+  	border-radius: 7px;
+}
+.positioning {
+	margin-bottom: 8em;
+	margin-top: 2.5em;
+	max-height: 668px;
+	overflow-y: hidden;
+}
+
+.scrollbar:hover, .scrollbar:focus {
+  overflow-y: auto;
+}
+
+.scrollbar::-webkit-scrollbar-track
+{	
+	background-color: #dcdcdc;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #dcdcdc;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #17BEBB;
+}
+
+nav {
+	background-color: #fcfcfc;
+	position: relative;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+main {
+	background-color: #f2f2f2;	
+	position: relative;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.heading {
+	margin-top: 0rem;
+	margin-left: 2rem;
+	margin-right: 1%;
+	margin-bottom: 2rem;
+	font-weight: 500;
+	
+    
+}
+.listsTop {
+	margin-top: -28px;
+}
+.listHeading {
+	background-color: #fcfcfc;
+	padding-bottom: 28px;
+}
+
+.taskHeading {
+	background-color: #f2f2f2;
+}
+.sticky {
+	position: sticky;
+	top: 0;
+}
+
+.inline {
+	display: inline-block;
+}
+.right {
+	float: right;
+}
+.w100 {
+	width: 100%;
+}
+.mr1 {
+	margin-right: 5%;
+}
+.mr0 {
+	margin-right: 1%;
+}
+.mt0 {
+	margin-top: 0;
+}
+ul {
+	margin: 0 2rem;
+}
+ul li {
+	padding: 15px;
+	margin-bottom: 1em;
+	border-radius: 7px;
+}
+li {
+	color: #333333;
+	cursor: pointer;
+}
+li:hover {
+	background-color: #f2f2f2;
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transition: all 0.1s ease-in-out;
+}
+li.active {
+	background-color: #71eeec;
+}
+
+main li {
+	background-color: #fcfcfc;
+}
+
+/* ADD LIST BUTTON */
+.listBtn {
+	width: 60%;
+	border-radius: 7px;
+	margin: 0 auto;
+	position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 58px;
+	background-color: #17BEBB;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+	color: #fff;
+    line-height: 25px; 
+    padding: 5px;
+    cursor: pointer;
+}
+.listBtn:hover {
+   box-shadow: 0 6px 14px 0 #666;
+   transform: scale(1.05);
+}
+/* /ADD LIST BUTTON */
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #17BEBB;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* FAB */
+.fab {
+   width: 50px;
+   height: 50px;
+   background-color: #17BEBB;
+   border-radius: 50%;
+   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+   transition: all 0.1s ease-in-out;
+ 
+   font-size: 2rem;
+   color: white;
+   text-align: center;
+   line-height: 50px;
+ 
+   position: absolute;
+   right: 50px;
+   bottom: 50px;
+   cursor: pointer;
+}
+ 
+.fab:hover {
+   box-shadow: 0 6px 14px 0 #666;
+   transform: scale(1.05);
+}
+/* /FAB */
+
+.modal-header h2 {
+	margin-bottom: 1em;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  margin-left: -150px;
+  margin-right: -150px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.listClose, .itemClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.listClose:hover,
+.listClose:focus,
+.itemClose:hover,
+.itemClosr:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Modal Content */
+
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 25%; opacity: 1}
+}
+
+/* FORM */
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, input {
+    overflow: visible;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-control {
+    display: block;
+    width: 90%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
